@@ -42,7 +42,7 @@ public class Cat {
     public void setFurColor( String furColor ) { this.furColor = furColor; }            // setter
     public void setAge( int age ) { this.age = age; }                                   // setter
 
-    public String checkEscaltionLevel() {
+    private String checkEscaltionLevel() {
         level++;
         switch ( level ) {
             case 1:
