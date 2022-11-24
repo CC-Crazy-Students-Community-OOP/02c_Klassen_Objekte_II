@@ -36,6 +36,7 @@ public class App {
             output( cat4.getAge() );
             output( cat4.getAge() );
             output( cat4.getAge() );
+            output( cat4.getAge() );
             output( "------------------------" );
     }
 

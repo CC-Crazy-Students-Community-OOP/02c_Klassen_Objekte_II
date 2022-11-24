@@ -5,7 +5,7 @@ public class Cat {
    private String name;
    private String furColor;
    private int age;
-   private int level = 1;
+   private int level;
    private boolean isFemale;
 
     public Cat( String name, String furColor, int age, boolean isFemale ) {
@@ -24,8 +24,7 @@ public class Cat {
             case "#age":
                 return String.valueOf( age );
             case "#age2":
-                level++;
-                return checkEscaltionLevel( level );
+                return checkEscaltionLevel();
             default:
                 return "Error";
         }
@@ -34,8 +33,7 @@ public class Cat {
         if ( !isFemale ) {
             return Integer.toString( age ); 
         } else {
-            level++;
-            return checkEscaltionLevel( level );
+            return checkEscaltionLevel();
         }
     }
     public int getAge2() { return age; }                                                // age als int Ausgabe
@@ -44,7 +42,8 @@ public class Cat {
     public void setFurColor( String furColor ) { this.furColor = furColor; }            // setter
     public void setAge( int age ) { this.age = age; }                                   // setter
 
-    public String checkEscaltionLevel( int level ) {
+    public String checkEscaltionLevel() {
+        level++;
         switch ( level ) {
             case 1:
                 return "DARE to ask";
